@@ -86,7 +86,7 @@ const HeroSection = () => {
             asChild 
             size="lg" 
             variant="outline" 
-            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 text-base"
+            className="border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white px-8 text-base font-semibold backdrop-blur-sm"
           >
             <Link to="/departments">Explore Programs</Link>
           </Button>

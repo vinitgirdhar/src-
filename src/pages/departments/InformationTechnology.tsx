@@ -194,11 +194,18 @@ const InformationTechnology = () => {
                                 { title: "Colloquium 24 - IT for Smart College Campus", date: "Mar 22-23, 24", loc: "SFIT, Borivali" },
                                 { title: "Colloquium 2023 - IT in Wellness-Tech", date: "Apr 12-13, 23", loc: "SFIT, Borivali" },
                             ].map((event, i) => (
-                                <Card key={i} className="hover:shadow-md transition-shadow border-none bg-gray-50">
-                                    <CardHeader className="pb-2">
+                                <Card
+                                    key={i}
+                                    className="group border-none bg-gray-50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:bg-white"
+                                >
+                                    <CardHeader className="pb-2 transition-colors duration-300">
                                         <div className="text-xs font-bold text-amber mb-2 uppercase tracking-wider">{event.date}</div>
-                                        <CardTitle className="text-lg leading-tight">{event.title}</CardTitle>
-                                        <CardDescription>{event.loc}</CardDescription>
+                                        <CardTitle className="text-lg leading-tight transition-colors duration-300 group-hover:text-navy">
+                                            {event.title}
+                                        </CardTitle>
+                                        <CardDescription className="transition-colors duration-300 group-hover:text-gray-700">
+                                            {event.loc}
+                                        </CardDescription>
                                     </CardHeader>
                                 </Card>
                             ))}

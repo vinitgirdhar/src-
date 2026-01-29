@@ -7,15 +7,15 @@ const AnnouncementTicker = () => {
 
   const announcements = [
     {
-      text: 'Undergraduate BTech Admission Notification AY 2025–26 is now open!',
+      text: 'Undergraduate BTech Admission Notification AY 2026–27 is now open!',
       link: '/admissions',
     },
     {
-      text: 'NAAC Peer Team Visit scheduled for February 2025',
+      text: 'NAAC Peer Team Visit scheduled for February 2026',
       link: '/about',
     },
     {
-      text: 'National Level Technical Symposium - Technovanza 2025',
+      text: 'National Level Technical Symposium - Technovanza 2026',
       link: '/events',
     },
   ];
@@ -23,22 +23,22 @@ const AnnouncementTicker = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-amber text-amber-foreground overflow-hidden">
-      <div className="container mx-auto px-4 py-2 flex items-center gap-4">
-        <div className="flex items-center gap-2 shrink-0">
-          <Megaphone className="h-4 w-4" />
-          <span className="text-xs font-semibold uppercase tracking-wide hidden sm:inline">
+    <div className="bg-amber text-amber-foreground overflow-hidden border-b border-amber-600/20">
+      <div className="container mx-auto px-2 md:px-4 py-2 flex items-center gap-2 md:gap-4 relative">
+        <div className="flex items-center gap-2 shrink-0 bg-amber z-10 pr-2">
+          <Megaphone className="h-3 w-3 md:h-4 md:w-4" />
+          <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wide hidden sm:inline">
             Announcements
           </span>
         </div>
         
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-hidden mask-linear-fade">
           <div className="flex animate-ticker whitespace-nowrap">
             {announcements.map((item, index) => (
               <Link
                 key={index}
                 to={item.link}
-                className="inline-flex items-center gap-8 px-4 text-sm hover:underline"
+                className="inline-flex items-center gap-8 px-4 text-xs md:text-sm hover:underline"
               >
                 <span>•</span>
                 <span>{item.text}</span>

@@ -44,6 +44,10 @@ const UtilityBar = () => {
               <Link to="/careers" className="hover:text-accent transition-colors">Careers</Link>
               <span className="text-primary-foreground/40">|</span>
               <Link to="/library" className="hover:text-accent transition-colors">Library</Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/disclosure" className="hover:text-accent transition-colors">Mandatory Disclosure</Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/nirf" className="hover:text-accent transition-colors">NIRF</Link>
             </div>
 
             {/* Social Icons */}

@@ -1,45 +1,60 @@
 import { Award, CheckCircle, Building2, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import sfitLogo from '@/assets/sfit-logo.png';
 
 const MainHeader = () => {
   const accreditations = [
-    { icon: CheckCircle, label: 'AICTE Approved' },
-    { icon: Award, label: 'ISO 9001:2015' },
-    { icon: Building2, label: 'Affiliated to Mumbai University' },
-    { icon: GraduationCap, label: 'NAAC A+ Accredited' },
+    { icon: CheckCircle, label: 'AICTE Approved', shortLabel: 'AICTE' },
+    { icon: Award, label: 'ISO 9001:2015', shortLabel: 'ISO' },
+    { icon: Building2, label: 'Mumbai University', shortLabel: 'MU' },
+    { icon: GraduationCap, label: 'NAAC A+', shortLabel: 'A+' },
   ];
 
   return (
     <div className="bg-card border-b border-border">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="container mx-auto px-4 py-3 md:py-4">
+        <div className="flex items-center justify-between gap-4">
           {/* Logo & Institute Name */}
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-2xl md:text-3xl font-display font-bold text-primary-foreground">
-                SFIT
-              </span>
+          <Link to="/" className="flex items-center gap-3 md:gap-4 group">
+            <div className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <img 
+                src={sfitLogo} 
+                alt="SFIT Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <h1 className="text-lg md:text-xl lg:text-2xl font-display font-bold text-primary leading-tight">
+            <div className="flex flex-col">
+              <h1 className="text-base md:text-lg lg:text-xl font-display font-bold text-primary leading-tight group-hover:text-accent transition-colors">
                 St. Francis Institute of Technology
               </h1>
-              <p className="text-xs md:text-sm text-muted-foreground">
-                Excellence in Engineering Education Since 1999
+              <p className="text-[10px] md:text-xs text-muted-foreground mt-0.5">
+                Permanently Affiliated to University of Mumbai
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Accreditation Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
             {accreditations.map((item, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-accent transition-colors"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-muted/50 hover:bg-accent/10 transition-all duration-300 group cursor-default"
+                title={item.label}
               >
-                <item.icon className="h-4 w-4 text-accent" />
-                <span className="hidden sm:inline">{item.label}</span>
+                <item.icon className="h-3.5 w-3.5 text-accent group-hover:scale-110 transition-transform" />
+                <span className="text-[11px] font-medium text-muted-foreground group-hover:text-accent transition-colors">
+                  {item.shortLabel}
+                </span>
               </div>
             ))}
+          </div>
+
+          {/* Mobile Accreditation Summary */}
+          <div className="flex md:hidden items-center gap-1.5">
+            <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-accent/10">
+              <Award className="h-3 w-3 text-accent" />
+              <span className="text-[10px] font-semibold text-accent">A+</span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
+import sfitLogo from '@/assets/sfit-logo.png';
 
 const Footer = () => {
   const quickLinks = [
@@ -27,26 +28,32 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-xl font-display font-bold text-accent-foreground">SFIT</span>
+            <Link to="/" className="flex items-center gap-3 mb-4 group">
+              <div className="w-14 h-14 flex-shrink-0 bg-white/10 rounded-xl p-1.5 group-hover:bg-white/20 transition-colors">
+                <img src={sfitLogo} alt="SFIT Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-display font-semibold text-lg">St. Francis Institute</h3>
+                <h3 className="font-display font-semibold text-lg group-hover:text-accent transition-colors">St. Francis Institute</h3>
                 <p className="text-xs text-primary-foreground/70">of Technology</p>
               </div>
-            </div>
+            </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">
               Shaping future engineers since 1999. NAAC A+ Accredited, NBA Approved institution 
               committed to excellence in technical education.
             </p>
             <div className="flex items-center gap-2">
-              {[Facebook, Twitter, Linkedin, Instagram, Youtube].map((Icon, index) => (
+              {[
+                { Icon: Facebook, label: 'Facebook' },
+                { Icon: Twitter, label: 'Twitter' },
+                { Icon: Linkedin, label: 'LinkedIn' },
+                { Icon: Instagram, label: 'Instagram' },
+                { Icon: Youtube, label: 'YouTube' },
+              ].map(({ Icon, label }) => (
                 <a
-                  key={index}
+                  key={label}
                   href="#"
-                  className="p-2 rounded-full bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  aria-label="Social link"
+                  className="p-2.5 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
+                  aria-label={label}
                 >
                   <Icon className="h-4 w-4" />
                 </a>

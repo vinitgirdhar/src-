@@ -239,14 +239,12 @@ const Navigation = () => {
 
       {/* Mobile/Tablet Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[calc(theme(spacing.12)+theme(spacing.8))] md:top-[calc(theme(spacing.14)+theme(spacing.8))] bg-black/50 z-30" onClick={() => setIsMobileMenuOpen(false)}>
-           {/* Calculated top offset roughly accounts for header + ticker. Adjust via CSS if needed or just use consistent top-12 */}
-        </div>
+        <div className="lg:hidden fixed inset-0 bg-black/50 z-30" onClick={() => setIsMobileMenuOpen(false)} />
       )}
       
       {/* Side Menu Drawer for Mobile/Tablet */}
       <div className={cn(
-        "lg:hidden fixed top-12 md:top-14 right-0 bottom-0 w-[80%] md:w-[350px] bg-white z-40 shadow-2xl overflow-y-auto transition-transform duration-300 ease-in-out transform border-l border-gray-200",
+        "lg:hidden fixed top-0 right-0 bottom-0 w-[85%] sm:w-[350px] bg-white z-40 shadow-2xl overflow-y-auto transition-transform duration-300 ease-in-out transform",
         isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
           <div className="p-4 flex flex-col gap-2">

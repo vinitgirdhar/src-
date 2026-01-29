@@ -5,22 +5,15 @@ const UtilityBar = () => {
   return (
     <div className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-2 text-xs md:text-sm">
+        <div className="flex flex-col sm:flex-row items-center justify-between py-2 text-xs md:text-sm gap-2">
           {/* Contact Info */}
-          <div className="flex flex-wrap items-start gap-4 mb-2 md:mb-0">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4">
             <a 
               href="tel:+919167370622" 
               className="flex items-center gap-1 hover:text-accent transition-colors"
             >
               <Phone className="h-3 w-3" />
               <span>+91 9167370622</span>
-            </a>
-            <a 
-              href="tel:+919167370632" 
-              className="hidden sm:flex items-center gap-1 hover:text-accent transition-colors"
-            >
-              <Phone className="h-3 w-3" />
-              <span>+91 9167370632</span>
             </a>
             <a 
               href="mailto:sfedu@sfit.ac.in" 
@@ -32,7 +25,7 @@ const UtilityBar = () => {
           </div>
 
           {/* Quick Links & Social */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             {/* Quick Links */}
             <div className="hidden lg:flex items-center gap-3 text-xs">
               <Link to="/staff-login" className="hover:text-accent transition-colors">Staff Login</Link>

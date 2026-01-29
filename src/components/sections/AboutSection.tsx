@@ -89,7 +89,7 @@ const AboutSection = () => {
               />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 md:-left-10 p-6 bg-card rounded-xl shadow-elegant border border-border">
+            <div className="absolute -bottom-6 left-4 right-4 md:right-auto md:-left-10 p-6 bg-card rounded-xl shadow-elegant border border-border">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center">
                   <span className="text-2xl font-display font-bold text-accent">A+</span>

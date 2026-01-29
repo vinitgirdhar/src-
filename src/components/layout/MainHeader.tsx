@@ -5,7 +5,7 @@ const MainHeader = () => {
   return (
     <div className="bg-card border-b border-border">
       <div className="container mx-auto px-4 py-3 md:py-4">
-        <div className="flex items-center justify-center gap-4 md:gap-6">
+        <div className="flex items-center justify-start gap-4 md:gap-6">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
             <img 
@@ -16,7 +16,7 @@ const MainHeader = () => {
           </Link>
 
           {/* Institute Name & Accreditations */}
-          <div className="flex flex-col text-center md:text-left">
+          <div className="flex flex-col text-left">
             <Link to="/" className="group">
               <h1 className="text-lg md:text-2xl lg:text-3xl font-display font-bold text-destructive leading-tight group-hover:text-destructive/80 transition-colors">
                 St. Francis Institute of Technology

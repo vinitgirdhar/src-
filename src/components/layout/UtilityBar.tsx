@@ -5,9 +5,9 @@ const UtilityBar = () => {
   return (
     <div className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between py-2 text-xs md:text-sm">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-2 text-xs md:text-sm">
           {/* Contact Info */}
-          <div className="flex flex-wrap items-center gap-4 mb-2 md:mb-0">
+          <div className="flex flex-wrap items-start gap-4 mb-2 md:mb-0">
             <a 
               href="tel:+919167370622" 
               className="flex items-center gap-1 hover:text-accent transition-colors"

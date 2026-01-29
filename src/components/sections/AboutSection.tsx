@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import sfitCampus from '@/assets/SFIT.png';
 
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,7 +83,7 @@ const AboutSection = () => {
           <div className={`relative transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
               <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
+                src={sfitCampus}
                 alt="SFIT Campus"
                 className="w-full h-full object-cover"
               />

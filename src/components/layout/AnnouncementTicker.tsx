@@ -33,7 +33,7 @@ const AnnouncementTicker = () => {
         </div>
         
         <div className="flex-1 overflow-hidden mask-linear-fade">
-          <div className="flex animate-ticker whitespace-nowrap">
+          <div className="flex ticker-track whitespace-nowrap">
             {announcements.map((item, index) => (
               <Link
                 key={index}

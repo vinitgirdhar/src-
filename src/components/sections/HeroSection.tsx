@@ -78,13 +78,6 @@ const HeroSection = () => {
           <Button 
             asChild 
             size="lg" 
-            className="bg-amber text-amber-foreground hover:bg-amber/90 px-8 text-base font-semibold"
-          >
-            <Link to="/admissions">Apply Now</Link>
-          </Button>
-          <Button 
-            asChild 
-            size="lg" 
             variant="outline" 
             className="border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white px-8 text-base font-semibold backdrop-blur-sm"
           >

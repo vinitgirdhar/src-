@@ -77,19 +77,19 @@ const WhySFITSection = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`group p-6 bg-primary-foreground/5 backdrop-blur-sm rounded-xl border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-700 ${
+              className={`group p-6 md:p-8 bg-primary-foreground/5 backdrop-blur-sm rounded-2xl border border-primary-foreground/10 hover:bg-primary-foreground/10 hover:border-accent/30 transition-all duration-500 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-accent/30 transition-all duration-300">
                 <feature.icon className="h-7 w-7 text-accent" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-primary-foreground mb-2">
+              <h3 className="font-display text-xl font-semibold text-primary-foreground mb-3">
                 {feature.title}
               </h3>
               <p className="text-sm text-primary-foreground/70 leading-relaxed">

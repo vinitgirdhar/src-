@@ -129,13 +129,8 @@ const Navigation = () => {
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          {/* Mobile Logo */}
-          <div className="lg:hidden flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-sm font-display font-bold text-primary-foreground">SF</span>
-            </div>
-            <span className="font-display font-semibold text-primary">SFIT</span>
-          </div>
+          {/* Mobile Logo - empty since logo is in MainHeader */}
+          <div className="lg:hidden" />
 
           {/* Mobile Apply Button */}
           <Link

@@ -60,8 +60,10 @@ const AboutSection = () => {
             {/* Highlights Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {highlights.map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent shrink-0" />
+                <div key={index} className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-muted/50 transition-colors">
+                  <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="h-3.5 w-3.5 text-accent" />
+                  </div>
                   <span className="text-sm font-medium text-foreground">{item}</span>
                 </div>
               ))}

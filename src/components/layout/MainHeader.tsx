@@ -1,60 +1,44 @@
-import { Award, CheckCircle, Building2, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import sfitLogo from '@/assets/sfit-logo.png';
 
 const MainHeader = () => {
-  const accreditations = [
-    { icon: CheckCircle, label: 'AICTE Approved', shortLabel: 'AICTE' },
-    { icon: Award, label: 'ISO 9001:2015', shortLabel: 'ISO' },
-    { icon: Building2, label: 'Mumbai University', shortLabel: 'MU' },
-    { icon: GraduationCap, label: 'NAAC A+', shortLabel: 'A+' },
-  ];
-
   return (
     <div className="bg-card border-b border-border">
       <div className="container mx-auto px-4 py-3 md:py-4">
-        <div className="flex items-center justify-between gap-4">
-          {/* Logo & Institute Name */}
-          <Link to="/" className="flex items-center gap-3 md:gap-4 group">
-            <div className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
-              <img 
-                src={sfitLogo} 
-                alt="SFIT Logo" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-base md:text-lg lg:text-xl font-display font-bold text-primary leading-tight group-hover:text-accent transition-colors">
-                St. Francis Institute of Technology
-              </h1>
-              <p className="text-[10px] md:text-xs text-muted-foreground mt-0.5">
-                Permanently Affiliated to University of Mumbai
-              </p>
-            </div>
+        <div className="flex items-center justify-center gap-4 md:gap-6">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+            <img 
+              src={sfitLogo} 
+              alt="SFIT Logo" 
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
+            />
           </Link>
 
-          {/* Accreditation Badges */}
-          <div className="hidden md:flex items-center gap-2 lg:gap-3">
-            {accreditations.map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-muted/50 hover:bg-accent/10 transition-all duration-300 group cursor-default"
-                title={item.label}
-              >
-                <item.icon className="h-3.5 w-3.5 text-accent group-hover:scale-110 transition-transform" />
-                <span className="text-[11px] font-medium text-muted-foreground group-hover:text-accent transition-colors">
-                  {item.shortLabel}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile Accreditation Summary */}
-          <div className="flex md:hidden items-center gap-1.5">
-            <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-accent/10">
-              <Award className="h-3 w-3 text-accent" />
-              <span className="text-[10px] font-semibold text-accent">A+</span>
-            </div>
+          {/* Institute Name & Accreditations */}
+          <div className="flex flex-col text-center md:text-left">
+            <Link to="/" className="group">
+              <h1 className="text-lg md:text-2xl lg:text-3xl font-display font-bold text-destructive leading-tight group-hover:text-destructive/80 transition-colors">
+                St. Francis Institute of Technology
+              </h1>
+            </Link>
+            
+            {/* Accreditation Line 1 */}
+            <p className="text-[9px] md:text-xs lg:text-sm text-muted-foreground mt-1 leading-snug">
+              Approved By AICTE | ISO 9001:2015 Certified | Permanently Affiliated to University of Mumbai
+            </p>
+            
+            {/* Accreditation Line 2 */}
+            <p className="text-[8px] md:text-[10px] lg:text-xs text-muted-foreground leading-snug hidden sm:block">
+              Computer Engineering, Information Technology and Electronics and Telecommunication
+              <br className="hidden lg:block" />
+              <span className="lg:hidden"> </span>Engineering are NBA Accredited, NAAC A+ Accredited
+            </p>
+            
+            {/* Mobile compact accreditation */}
+            <p className="text-[8px] text-muted-foreground sm:hidden">
+              NBA & NAAC A+ Accredited
+            </p>
           </div>
         </div>
       </div>

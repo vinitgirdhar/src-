@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Departments from "./pages/Departments";
 import Contact from "./pages/Contact";
 import Admissions from "./pages/Admissions";
+import InformationTechnology from "./pages/departments/InformationTechnology";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,19 @@ const App = () => (
           <Route path="/departments" element={<Departments />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admissions" element={<Admissions />} />
+          <Route
+            path="/departments/information-technology"
+            element={<InformationTechnology />}
+          />
+          {/* Temporarily mapping other departments back to Departments list or NotFound until developed */}
+          <Route path="/departments/computer" element={<NotFound />} />
+          <Route path="/departments/electrical" element={<NotFound />} />
+          <Route path="/departments/sh" element={<NotFound />} />
+          <Route path="/departments/extc" element={<NotFound />} />
+          <Route path="/departments/mechanical" element={<NotFound />} />
+          <Route path="/departments/aiml" element={<NotFound />} />
+          <Route path="/departments/ecs" element={<NotFound />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

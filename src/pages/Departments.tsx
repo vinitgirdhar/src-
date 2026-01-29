@@ -22,7 +22,7 @@ const departments = [
     icon: Monitor,
     seats: 120,
     description: 'Focus on information systems, networking, and digital technologies.',
-    href: '/departments/it',
+    href: '/departments/information-technology',
   },
   {
     name: 'Electronics & Telecommunication',

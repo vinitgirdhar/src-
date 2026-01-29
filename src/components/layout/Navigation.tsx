@@ -31,7 +31,7 @@ const navItems: NavItem[] = [
     href: '/departments',
     children: [
       { label: 'Computer Engineering', href: '/departments/computer' },
-      { label: 'Information Technology', href: '/departments/it' },
+      { label: 'Information Technology', href: '/departments/information-technology' },
       { label: 'Electrical Engineering', href: '/departments/electrical' },
       { label: 'Basic Science & Humanities', href: '/departments/sh' },
       { label: 'Electronics and Telecommunication Engineering', href: '/departments/extc' },
@@ -256,7 +256,7 @@ const Navigation = () => {
                 <div className="flex items-center justify-between py-2">
                   <Link
                     to={item.href}
-                    onClick={() => !item.children && setIsMobileMenuOpen(false)}
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
                       'text-base font-semibold uppercase tracking-tight flex-1 py-1',
                       location.pathname === item.href
@@ -286,6 +286,7 @@ const Navigation = () => {
                       <Link
                         key={child.href}
                         to={child.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-3 py-2 text-sm text-gray-600 hover:text-amber-600 hover:bg-amber-50/50 rounded transition-colors"
                       >
                         {child.label}
@@ -299,6 +300,7 @@ const Navigation = () => {
             <div className="mt-6 pt-4 border-t border-gray-100">
               <Link
                 to="/admissions"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center w-full px-4 py-3 bg-amber text-amber-foreground font-bold text-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm"
               >
                 Apply for Admission 2026-27
